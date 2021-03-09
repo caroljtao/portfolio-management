@@ -14,5 +14,6 @@ print(average_discrete_return)                 # calculate the average return in
 annualized_discrete_return = average_discrete_return*250              #the annulized return is 0.12085043873983932 (jupyter notebook's output)
 log_return=np.log(JNJ['discrete return']/JNJ['discrete return'].shift(1))
 log_return.plot(figsize=(10,6))
-
-
+volatility=(JNJ['discrete return'].var())**0.5
+print(volatility)
+annualized_volatility=volatility*(250**0.5)                *calculate annualized volatility
