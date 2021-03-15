@@ -8,3 +8,5 @@ portfolio.iloc[0][1]
 (discrete_return=portfolio/portfolio.shift(1)-1).plot(figsize=（10,6))
 log_return=np.log(portfolio/portfolio.shift(1)).plot(figsize=(10,6))
 weight=[0.3,0.4,0.1,0.2]
+np.dot(discrete_return,weight)             #return a matrix that contains the portfolo return on each day, can't be right. Gotta average the return of each stock and then dot
+portfolio return = np.dot(discrete_return.mean()*250,weight)
