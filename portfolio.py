@@ -7,3 +7,4 @@ portfolio.iloc[0][1]
 (portfolio/portfolio.iloc[0]*100).plot(figsize=(10,6)              #normalize each stock's return and plot it
 (discrete_return=portfolio/portfolio.shift(1)-1).plot(figsize=（10,6))
 log_return=np.log(portfolio/portfolio.shift(1)).plot(figsize=(10,6))
+weight=[0.3,0.4,0.1,0.2]
