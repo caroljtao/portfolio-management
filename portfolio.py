@@ -14,5 +14,7 @@ print(portfolio_return)
 # covariance calculation in the following
 discrete_return.cov()*250
 discrete_return.corr()          #calculate the correlation table for the portfolio (JNJ, Sunlife and QCOMM are good diversifiers)
-
-
+#calculate portfolio variance and volatility
+weight=np.array([0.3,0.4,0.1,0.2])
+portfolio_var=np.dot(weight.T, np.dot(discrete_return.cov()*250 ,weight))    #variance
+print((portfolio_var)**0.5)       #volatility
