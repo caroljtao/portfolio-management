@@ -29,3 +29,10 @@ plt.hist(gross_profit,bins=20)                 #draw the histogram to show the d
 #r equals drift+volatility of the stock price.
 #drift=u-0.5*stdd^2 and volatility of stock price=stdd*Z(Rand(0;1))
 # Above is actually parametric method: mean + stdd*Z score 
+from scipy.stats import norm
+from pandas_datareader import data as wb
+%matplotlib inline
+JNJ=wb.DataReader("JNJ",data_source="yahoo",start="2017-09-01")
+logreturn=np.log(1+JNJ.pct_change())
+plt.figure(figsize=(10,6))
+plt.plot(logreturn)
