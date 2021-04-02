@@ -8,3 +8,6 @@ JNJ_regression_data.head()
 Y=JNJ_regression_data['Adj Close']
 X=JNJ_regression_data['Date']
 Y.head(),X.head()
+plt.scatter(X,Y)
+plt.xlabel('time')
+plt.ylabel('price')
