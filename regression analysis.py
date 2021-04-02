@@ -11,3 +11,5 @@ Y.head(),X.head()
 plt.scatter(X,Y)
 plt.xlabel('time')
 plt.ylabel('price')
+# Time series here X needs to be converted to float int64. Date can't be used to run regression. 
+
