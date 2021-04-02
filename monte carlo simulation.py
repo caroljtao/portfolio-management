@@ -24,3 +24,8 @@ plt.figure(figsize=(15,6))
 plt.hist(gross_profit,bins=20)                 #draw the histogram to show the distribution of gross profits => find it's a normal distribution
 
 # asset pricing with monte carlo simulation
+# use the formula for asset pricing: p(Today)=p(yesterday)*e^r, r is the log return of share price between yesterday and toda
+# use Brownian motion to model r (r is a random variable)
+#r equals drift+volatility of the stock price.
+#drift=u-0.5*stdd^2 and volatility of stock price=stdd*Z(Rand(0;1))
+# Above is actually parametric method: mean + stdd*Z score 
